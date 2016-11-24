@@ -2,7 +2,9 @@ require 'sequel'
 
 DB = Sequel.sqlite('test.sqlite3')
 
-DB.create_table :items do
+DB.drop_table?(:items)
+
+DB.create_table? :items do
   primary_key :id
   String :name
   Float :price
