@@ -20,10 +20,10 @@ puts "レコード数: #{items.count}"
 
 puts "priceの平均: #{items.avg(:price)}"
 
-items.filter('name = "abc"').update(:price => 180)
+items.where(name: "abc").update(price: 180)
 
 puts "priceの平均: #{items.avg(:price)}"
 
-items.filter('name = "ghi"').delete
+items.where(name: "ghi").delete
 
 puts "レコード数: #{items.count}"
