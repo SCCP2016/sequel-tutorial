@@ -12,9 +12,9 @@ end
 
 items = DB[:items]
 
-items.insert(:name => 'abc', :price => 90)
-items.insert(:name => 'def', :price => 120)
-items.insert(:name => 'ghi', :price => 150)
+items.insert(name: 'abc', price: 90)
+items.insert(name: 'def', price: 120)
+items.insert(name: 'ghi', price: 150)
 
 puts "レコード数: #{items.count}"
 
